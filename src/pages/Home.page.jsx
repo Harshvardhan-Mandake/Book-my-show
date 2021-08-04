@@ -9,6 +9,7 @@ import PosterSlider from "../components/PosterSlider/PosterSlider.component";
 import TempPosters from "../config/TempPosters.config";
 
 const HomePage = () => {
+
   const [popularMovies, setPopularMovies] = useState([]);
   const [topRatedMovies, setTopRatedMovies] = useState([]);
   const [upcomingMovies, setUpcomingMovies] = useState([]);
@@ -39,6 +40,7 @@ const HomePage = () => {
 
     requestUpcomingMovies();
   }, []);
+
 
   return (
     <>

@@ -6,6 +6,7 @@ import axios from "axios";
 import { NextArrow, PrevArrow } from "./Arrows.component";
 
 const HeroCarousal = () => {
+  
   const [images, setImages] = useState([]);
 
   useEffect(() => {
@@ -16,7 +17,7 @@ const HeroCarousal = () => {
 
     requestNowPlayingMovies();
   }, []);
-
+  
   const settingsLG = {
     arrows: true,
     autoplay: true,

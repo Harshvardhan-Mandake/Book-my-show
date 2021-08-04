@@ -1,9 +1,8 @@
 import { FaCcVisa, FaCcApplePay } from "react-icons/fa";
-import React, { useContext, useState, useEffect } from "react";
+import React, { useContext, useState, useEffect} from "react";
 import axios from "axios";
 import { useParams } from "react-router";
 import Slider from "react-slick";
-
 // Component
 import MovieHero from "../components/MovieHero/MovieHero.component";
 import Cast from "../components/Cast/Cast.component";
@@ -12,12 +11,14 @@ import PosterSlider from "../components/PosterSlider/PosterSlider.component";
 // config
 import TempPosters from "../config/TempPosters.config";
 
-// context
+// context data
 import { MovieContext } from "../context/movie.context";
 
 const Movie = () => {
+
   const { id } = useParams();
   const { movie } = useContext(MovieContext);
+
   const [cast, setCast] = useState([]);
   const [similarMovies, setSimilarMovies] = useState([]);
   const [recommended, setRecommended] = useState([]);
@@ -166,7 +167,6 @@ const Movie = () => {
         </div>
         <div className="my-8">
           <h2 className="text-gray-800 font-bold text-2xl mb-4">Cast & crew</h2>
-
           <Slider {...settingsCast}>
             {cast.map((castdata) => (
               <Cast
@@ -192,7 +192,7 @@ const Movie = () => {
           <hr />
         </div>
         <div className="my-8">
-          <PosterSlider
+        <PosterSlider
             config={settings}
             images={recommended}
             title="BMS XCLUSIVE"

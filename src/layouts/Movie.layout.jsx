@@ -5,10 +5,11 @@ import { useParams } from "react-router-dom";
 // Components
 import MovieNavbar from "../components/Navbar/movieNavbar.component";
 
-// context
+// context imp
 import { MovieContext } from "../context/movie.context";
 
 const MovieLayout = (props) => {
+
   const { id } = useParams();
   const { movie, setMovie } = useContext(MovieContext);
 

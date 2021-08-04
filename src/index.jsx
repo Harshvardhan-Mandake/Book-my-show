@@ -5,7 +5,7 @@ import { BrowserRouter } from "react-router-dom";
 import "./index.css";
 import App from "./App";
 
-// context provider
+//context
 import MovieProvider from "./context/movie.context";
 
 ReactDOM.render(
